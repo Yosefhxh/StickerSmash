@@ -42,11 +42,19 @@ StickerSmash es una app de React Native con [Expo](https://expo.dev) para iOS, A
 - SVG vectorial escalable de alta calidad
 - Herramientas para convertirlo a PNG
 
+### 🔔 Sistema de notificaciones push
+- Registro del dispositivo para Expo Push Tokens
+- Canal Android configurado para alertas
+- Pantalla dedicada para probar notificaciones locales
+- Navegación automática al tocar una notificación
+
 **Archivos relacionados:**
 - [app.json](app.json)
 - [assets/images/icon-new.svg](assets/images/icon-new.svg)
 - [scripts/generate-icons.js](scripts/generate-icons.js)
 - [SPLASH_SCREEN_GUIDE.md](SPLASH_SCREEN_GUIDE.md)
+- [app/(tabs)/notifications.tsx](app/(tabs)/notifications.tsx)
+- [utils/notifications.ts](utils/notifications.ts)
 
 ## 🚀 Comenzar
 
