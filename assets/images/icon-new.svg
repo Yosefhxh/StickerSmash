@@ -1,0 +1,90 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente principal -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sombra suave -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- Filtro de luz -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo redondeado con gradiente -->
+  <rect width="200" height="200" rx="45" fill="url(#mainGradient)" filter="url(#shadow)"/>
+  
+  <!-- Brillo superior para efecto 3D -->
+  <ellipse cx="60" cy="50" rx="50" ry="40" fill="white" opacity="0.15"/>
+  
+  <!-- Contenedor principal del emoji -->
+  <g transform="translate(100, 100)">
+    <!-- Cara del emoji -->
+    <circle cx="0" cy="0" r="50" fill="white" filter="url(#glow)"/>
+    
+    <!-- Sombra interior suave de la cara -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#f0f0f0" stroke-width="2"/>
+    
+    <!-- Ojos izquierdo y derecho -->
+    <g id="eyes">
+      <!-- Ojo izquierdo -->
+      <circle cx="-18" cy="-18" r="7" fill="#FF6B6B"/>
+      <circle cx="-18" cy="-18" r="3" fill="white" cx="-16" cy="-20"/>
+      
+      <!-- Ojo derecho -->
+      <circle cx="18" cy="-18" r="7" fill="#FF6B6B"/>
+      <circle cx="18" cy="-18" r="3" fill="white" cx="20" cy="-20"/>
+    </g>
+    
+    <!-- Sonrisa (arco) -->
+    <path d="M -22 8 Q 0 28 22 8" stroke="#FF6B6B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Lengua -->
+    <ellipse cx="0" cy="32" rx="9" ry="14" fill="#FFB3BA" opacity="0.9"/>
+    
+    <!-- Mejillas sonrosadas -->
+    <circle cx="-40" cy="-5" r="9" fill="#FFB3BA" opacity="0.5"/>
+    <circle cx="40" cy="-5" r="9" fill="#FFB3BA" opacity="0.5"/>
+    
+    <!-- Brillo de ojos -->
+    <circle cx="-14" cy="-22" r="2.5" fill="white" opacity="0.8"/>
+    <circle cx="22" cy="-22" r="2.5" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Sticker #1 - Estrella (arriba derecha) -->
+  <g transform="translate(155, 35) rotate(20)">
+    <rect width="32" height="32" rx="6" fill="#FFD93D" filter="url(#shadow)"/>
+    <path d="M16,4 L19.09,12.4 L28,12.4 L20.95,17.6 L23.95,26 L16,20.8 L8.05,26 L11.05,17.6 L4,12.4 L12.91,12.4 Z" fill="white"/>
+  </g>
+  
+  <!-- Sticker #2 - Corazón (abajo izquierda) -->
+  <g transform="translate(35, 155) rotate(-25)">
+    <rect width="32" height="32" rx="6" fill="#FF6B9D" filter="url(#shadow)"/>
+    <path d="M16,10 C16,10 10,6 7,10 C4,12 6,18 16,25 C26,18 28,12 25,10 C22,6 16,10 16,10 Z" fill="white"/>
+  </g>
+  
+  <!-- Sticker #3 - Checkmark (abajo derecha) -->
+  <g transform="translate(155, 155) rotate(15)">
+    <rect width="32" height="32" rx="6" fill="#6BCB77" filter="url(#shadow)"/>
+    <path d="M8,16 L13,21 L24,10" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Sticker #4 - Spark (arriba izquierda) -->
+  <g transform="translate(35, 35) rotate(-15)">
+    <rect width="28" height="28" rx="4" fill="#FFE66D" filter="url(#shadow)"/>
+    <g transform="translate(14, 14)">
+      <path d="M0,-8 L2,-2 L8,0 L2,2 L0,8 L-2,2 L-8,0 L-2,-2 Z" fill="white"/>
+    </g>
+  </g>
+</svg>
