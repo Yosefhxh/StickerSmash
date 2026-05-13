@@ -16,7 +16,7 @@ StickerSmash es una app de React Native con [Expo](https://expo.dev) para iOS, A
     </td>
     <td align="center" width="50%">
       <strong>Pantalla de carga</strong><br />
-      <img src="assets/images/background-image.png" alt="Pantalla de carga de StickerSmash" width="180" />
+      <img src="assets/images/splashScreen.png" alt="Pantalla de carga de StickerSmash" width="180" />
     </td>
   </tr>
 </table>
